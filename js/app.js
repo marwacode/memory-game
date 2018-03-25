@@ -143,18 +143,18 @@ function showCard(e) {
     e.preventDefault();
     let item = e.target;
 
-    openList.push(item);
-
-    // incrementMove();
-
     if (openList.length <= 2) {
 
-        item.classList.add('show');
-        item.classList.add('open');
+        if (!item.classList.contains('open')) {
+            item.classList.add('show');
+            item.classList.add('open');
 
-        if (openList.length === 2) {
-            compare(openList);
-            openList = [];
+            openList.push(item);
+            if (openList.length === 2) {
+                compare(openList);
+                openList = [];
+
+            }
 
         }
 
