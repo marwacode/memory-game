@@ -145,7 +145,7 @@ function showCard(e) {
 
     openList.push(item);
 
-    incrementMove();
+    // incrementMove();
 
     if (openList.length <= 2) {
 
@@ -211,6 +211,7 @@ function compare(openList) {
 
             openList[1].classList.remove('open');
             openList[1].classList.remove('show');
+            incrementMove();
 
         }, 500);
 
